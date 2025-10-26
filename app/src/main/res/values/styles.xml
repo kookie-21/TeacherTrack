@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Custom Hint Text Style -->
+    <style name="HintTextStyle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/lightblue</item>
+    </style>
+
+</resources>

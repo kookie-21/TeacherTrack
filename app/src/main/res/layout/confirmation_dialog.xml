@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollViewConfirm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/zxing_transparent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/rounded_white_background"
+        android:layout_gravity="center"
+        android:minHeight="400dp"
+        android:elevation="6dp">
+
+        <!-- Dialog Title -->
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Attendance"
+            android:textColor="@color/lightblue"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Common style section: Labels + Values -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/confirmTeacherNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teacher Name"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/confirmTeacherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:ellipsize="end"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/confirmTeacherIdLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teacher ID"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/confirmTeacherId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12345"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:ellipsize="end"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/confirmCNLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course Number (CN)"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/confirmCN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CS101"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:ellipsize="end"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/confirmRoomIdLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room ID"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/confirmRoomId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room 301"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:ellipsize="end"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/confirmTimeRangeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time Range"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/confirmTimeRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="09:00 AM - 10:30 AM"
+                android:textColor="@color/lightblue"
+                android:textSize="16sp"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:ellipsize="end"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <!-- Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialogCancelButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/red"
+                app:cornerRadius="12dp"
+                android:layout_marginEnd="8dp"
+                android:minHeight="48dp"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialogConfirmButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Confirm"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green"
+                app:cornerRadius="12dp"
+                android:layout_marginStart="8dp"
+                android:minHeight="48dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

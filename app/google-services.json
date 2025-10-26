@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "111850255323",
+    "project_id": "stdb-68f43",
+    "storage_bucket": "stdb-68f43.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111850255323:android:491883bda424a785e06dfe",
+        "android_client_info": {
+          "package_name": "com.example.teachertrackfinalnagidnaugotnako"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDty9ymuAefGVl3r9YwAFzx4rxTQmBKSIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

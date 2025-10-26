@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.teachertrackfinalnagidnaugotnako">
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ttlogo"
+        android:label="TeacherTrack"
+        android:roundIcon="@drawable/ttlogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Teachertrackfinalnagidnaugotnako">
+        <activity
+            android:name=".checkerprof"
+            android:exported="false" />
+        <activity
+            android:name=".files"
+            android:exported="false" /> <!-- Files activity (Excel reader) -->
+        <activity
+            android:name=".Files"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".teachprofile"
+            android:exported="false" />
+        <activity
+            android:name=".checkerprofile"
+            android:exported="false" /> <!-- ✅ Added -->
+        <activity
+            android:name=".EditTeacherActivity"
+            android:backgroundDimEnabled="true"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".dashboardteacher"
+            android:exported="false" />
+        <activity
+            android:name=".dashboardchecker"
+            android:exported="false" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            tools:replace="android:theme,android:screenOrientation" />
+        <activity
+            android:name=".signup"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" /> <!-- ✅ Forgot Password Activity -->
+        <activity
+            android:name=".forgotpassword"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

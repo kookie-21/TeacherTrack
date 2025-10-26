@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:background="@drawable/background_gradient"
+    android:padding="16dp"
+    tools:context=".dashboardteacher">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Teacher Info Box -->
+        <LinearLayout
+            android:id="@+id/teacherInfoBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_border"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.95">
+
+            <!-- Profile Icon -->
+            <ImageView
+                android:id="@+id/profilebutton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Profile"
+                app:srcCompat="@drawable/menu"
+                app:tint="@color/lightblue" />
+
+            <!-- Info Texts -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/teacherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Teacher Name"
+                    android:textColor="@color/lightblue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/teacherId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Teacher ID"
+                    android:textColor="@color/lightblue"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- QR Code Container -->
+        <LinearLayout
+            android:id="@+id/qrCodeContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp"
+            app:layout_constraintTop_toBottomOf="@id/teacherInfoBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintWidth_percent="0.95">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QR Code"
+                android:textColor="@color/lightblue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <ImageView
+                android:id="@+id/qrCodeImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="QR Code"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/qrCodeImagedes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scan this QR code to mark attendance"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <!-- Logout and Exit Buttons Row -->
+        <LinearLayout
+            android:id="@+id/buttonRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.95">
+
+            <!-- Logout Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logoutButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Log out"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/blue"
+                app:cornerRadius="16dp"
+                android:minHeight="48dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Exit Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/exitButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Exit App"
+                android:textColor="@color/white"
+                android:backgroundTint="#1EB1CE"
+                app:cornerRadius="16dp"
+                android:minHeight="48dp"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
