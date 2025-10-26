@@ -19,10 +19,10 @@ android {
     // ADD THIS SIGNING CONFIG SECTION
     signingConfigs {
         create("release") {
-            storeFile = file("teachertrack.jks")  // Relative path - keystore in app folder
-            storePassword = "123456"  // Replace with your actual password
-            keyAlias = "kesed bodegas"  // Replace with your actual key alias
-            keyPassword = "123456"  // Replace with your actual key password
+            storeFile = file("teachertrack.jks")
+            storePassword = "123456"
+            keyAlias = "key1"
+            keyPassword = "123456"
         }
     }
 
